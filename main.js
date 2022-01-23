@@ -20,7 +20,7 @@ var app = http.createServer(function(request,response){
   <meta charset="utf-8">
 </head>
 <body>
-  <h1><a href="/?id=Web">WEB</a></h1>
+  <h1><a href="/">WEB</a></h1>
   <ul>
     <li><a href="?id=HTML">HTML</a></li>
     <li><a href="?id=CSS">CSS</a></li>
