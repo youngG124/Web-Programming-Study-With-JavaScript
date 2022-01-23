@@ -6,17 +6,10 @@ var app = http.createServer(function(request,response){
     var _url = request.url;
     var queryData = url.parse(request.url, true).query;
     var title = queryData.id
+    var pathname = url.parse(_url, true).pathname
+    console.log(pathname);
 
-    if(_url == '/'){
-      title = 'Welcome';
-    }
-    if(_url == '/favicon.ico'){
-        response.writeHead(404);
-        response.end();
-        return;        
-    }
-    response.writeHead(200);
-
+    if(pathname === '/') {
     fs.readFile(`data/${queryData.id}`, 'utf8',
     function(err, description) {
       var template = `
@@ -27,7 +20,7 @@ var app = http.createServer(function(request,response){
   <meta charset="utf-8">
 </head>
 <body>
-  <h1><a href="/">WEB</a></h1>
+  <h1><a href="/?id=Web">WEB</a></h1>
   <ul>
     <li><a href="?id=HTML">HTML</a></li>
     <li><a href="?id=CSS">CSS</a></li>
@@ -40,6 +33,11 @@ var app = http.createServer(function(request,response){
     `;
     response.end(template);
     });
+    } else {
+      response.writeHead(404);
+      response.end('Not Found');
+    }
+    
 
     
  
