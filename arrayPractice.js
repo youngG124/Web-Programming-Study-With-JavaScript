@@ -7,9 +7,17 @@ let days = ['월', '목', '금', '토', '일'];
 // }
 
 days.splice(1,0,"화","수");
-console.log(days);
 
 for(let i = 0; i < 5; i++) {
     let result = Math.floor(Math.random()*1000) + 1;
-    console.log(result);
 }
+
+
+let arr = ["나는", "김신영", "입니다"];
+
+arr.splice(1,0,"개발자");
+//console.log(arr);
+
+arr.concat(["안녕하세요"]);
+console.log(arr);
+
