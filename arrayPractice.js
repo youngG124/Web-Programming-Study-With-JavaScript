@@ -19,5 +19,23 @@ arr.splice(1,0,"개발자");
 //console.log(arr);
 
 arr.concat(["안녕하세요"]);
-console.log(arr);
 
+arr.forEach((name, index) => {
+    //console.log(`${index+1}.${name}`);
+});
+
+
+//console.log(arr.indexOf("김신영"));
+
+let userList = [
+    { name: "Mike", age:30},
+    { name: "Jane", age:27},
+    { name: "Tom", age:10},
+];
+
+
+const result = userList.filter((item) => {
+    return item.age === 10;
+})
+
+console.log(result);
