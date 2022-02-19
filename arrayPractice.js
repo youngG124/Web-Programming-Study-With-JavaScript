@@ -38,4 +38,12 @@ const result = userList.filter((item) => {
     return item.age === 10;
 })
 
-console.log(result);
+//console.log(result[0].name);
+
+let newUserList = userList.map((user, index) => {
+    return Object.assign({}, user, {
+        isAdault: user.age > 19,
+    })
+})
+
+console.log(newUserList);
