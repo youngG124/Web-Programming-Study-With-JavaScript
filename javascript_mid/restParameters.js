@@ -42,3 +42,16 @@ let arr2 = [4,5,6];
 
 let arr3 = [...arr1, ...arr2];
 console.log(arr3);
+
+let user = { name:"Mike"};
+let info = { age:30};
+let fe = ["JS", "React"];
+let lang = ["Korean", "Football"];
+
+user = {
+    ...user,
+    ...info,
+    skills : [...fe, ...lang],
+};
+
+console.log(user);
