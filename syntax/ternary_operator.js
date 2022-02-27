@@ -52,3 +52,15 @@ function getStringLength(str) {
 
 // 인자로 아무것도 넘기지 않았지만, 단축 평가를 사용해서 kkkk를 기본값으로 설정하여 함수의 결과가 4가 된다.
 console.log(getStringLength());
+
+// optional chaining operator
+var element = null;
+
+// element가 null 혹은 undefined인지 검사한다. 해당되면 undefined를 반환하고, 아니면 우항의 프로퍼티 참조를 이어간다.
+var value = element?.name;
+console.log(value);
+
+// property 참조를 이어가는 경우.
+var element = {name : 'kim', age : 25};
+var value = element?.name;
+console.log(value);
