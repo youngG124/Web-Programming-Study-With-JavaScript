@@ -5,4 +5,4 @@ var f = function add(x,y) {
 
 console.log(f(1,3));
 
-// 160p부터.
+// 160p부터.   
